@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets'
+import koszenieTrawy from '../../assets/oferta/zielen.avif'
+import odsniezanie from '../../assets/oferta/odsniezanie.avif'
+import sprzatanieBiur from '../../assets/oferta/sprzatanie-biur.avif'
+import sprzatanieGarazy from '../../assets/oferta/sprzatanie-garazy.avif'
+import sprzatanieMagazynow from '../../assets/oferta/sprzatanie-magazynow.avif'
+import sprzatanieOsiedli from '../../assets/oferta/sprzatanie-osiedli.avif'
+import sprzatanieSalonow from '../../assets/oferta/sprzatanie-salonow.avif'
+import sprzatanieSklepow from '../../assets/oferta/sprzatanie-sklepow.avif'
+import sprzatanieSzpitali from '../../assets/oferta/sprzatanie-szpitali.avif'
+import sprzatanieZewnatrz from '../../assets/oferta/sprzatanie-zewnatrz.avif'
+import zielen from '../../assets/oferta/zielen.avif'
+import zlotaRaczka from '../../assets/oferta/zlota-raczka.avif'
+
+const { title, description, imgSource } = Astro.props
+
+var img: ImageMetadata
+switch (imgSource) {
+  case 'sprzatanie-biur':
+    img = sprzatanieBiur
+    break
+  case 'sprzatanie-osiedli':
+    img = sprzatanieOsiedli
+    break
+  case 'sprzatanie-magazynow':
+    img = sprzatanieMagazynow
+    break
+  case 'sprzatanie-sklepow':
+    img = sprzatanieSklepow
+    break
+  case 'sprzatanie-salonow':
+    img = sprzatanieSalonow
+    break
+  case 'sprzatanie-zewnatrz':
+    img = sprzatanieZewnatrz
+    break
+  case 'sprzatanie-szpitali':
+    img = sprzatanieSzpitali
+    break
+  case 'sprzatanie-garazy':
+    img = sprzatanieGarazy
+    break
+  case 'odsniezanie':
+    img = odsniezanie
+    break
+  case 'zielen':
+    img = zielen
+    break
+  case 'koszenie-trawy':
+    img = koszenieTrawy
+    break
+  case 'zlota-raczka':
+    img = zlotaRaczka
+    break
+  default:
+    img = sprzatanieBiur
+}
+---
+
+<li>
+  <Image
+    class="aspect-[3/2] w-full rounded-2xl object-cover"
+    src={img}
+    alt=""
+  />
+  <h3 class="mt-6 text-lg/8 font-semibold tracking-tight text-gray-900">
+    {title}
+  </h3>
+  <p class="text-base/7 text-gray-600">{description}</p>
+</li>

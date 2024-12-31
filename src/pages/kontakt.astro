@@ -1,7 +1,159 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { Image } from 'astro:assets'
+import contactImage from '../assets/contact.avif'
 ---
 
 <BaseLayout>
-  <p>Some text</p>
+  <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+    <img
+      src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+      alt=""
+      class="absolute inset-0 -z-10 size-full object-cover"
+    />
+    <div
+      class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+      aria-hidden="true"
+    >
+      <div
+        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+      >
+      </div>
+    </div>
+    <div
+      class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+      aria-hidden="true"
+    >
+      <div
+        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+      >
+      </div>
+    </div>
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2
+          class="text-5xl font-semibold tracking-tight text-white sm:text-7xl"
+        >
+          Skontaktuj się z nami
+        </h2>
+        <p
+          class="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8"
+        >
+          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
+          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative isolate bg-white">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+      <div class="relative flex px-6 lg:static lg:px-8 lg:py-48">
+        <div
+          class="flex flex-col place-content-center mx-auto max-w-xl lg:mx-0 lg:max-w-lg"
+        >
+          <div>
+            <h2
+              class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+            >
+              Get in touch
+            </h2>
+            <p class="mt-6 text-lg/8 text-gray-600">
+              Proin volutpat consequat porttitor cras nullam gravida at. Orci
+              molestie a eu arcu. Sed ut tincidunt integer elementum id sem.
+              Arcu sed malesuada et magna.
+            </p>
+            <dl class="mt-10 space-y-4 text-base/7 text-gray-600">
+              <div class="flex gap-x-4">
+                <dt class="flex-none">
+                  <span class="sr-only">Address</span>
+                  <svg
+                    class="h-7 w-6 text-gray-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"
+                    ></path>
+                  </svg>
+                </dt>
+                <dd>545 Mavis Island<br />Chicago, IL 99191</dd>
+              </div>
+              <div class="flex gap-x-4">
+                <dt class="flex-none">
+                  <span class="sr-only">Telephone</span>
+                  <svg
+                    class="h-7 w-6 text-gray-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                    ></path>
+                  </svg>
+                </dt>
+                <dd>
+                  <a class="hover:text-gray-900" href="tel:+1 (555) 234-5678"
+                    >+1 (555) 234-5678</a
+                  >
+                </dd>
+              </div>
+              <div class="flex gap-x-4">
+                <dt class="flex-none">
+                  <span class="sr-only">Email</span>
+                  <svg
+                    class="h-7 w-6 text-gray-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                    ></path>
+                  </svg>
+                </dt>
+                <dd>
+                  <a class="hover:text-gray-900" href="mailto:hello@example.com"
+                    >hello@example.com</a
+                  >
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-6 lg:px-8">
+        <Image src={contactImage} alt="An image of a phone." />
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-900 px-6 py-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">
+        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
+        cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
+      </p>
+    </div>
+  </div>
 </BaseLayout>

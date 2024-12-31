@@ -2,21 +2,25 @@
 import { Image } from 'astro:assets'
 import logoImage from '../assets/arturana.svg'
 ---
+
 <footer class="bg-white">
   <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
     <div class="xl:grid xl:grid-cols-3 xl:gap-8">
       <div class="space-y-8">
         {/* TODO: Fix the alignment of the logo */}
         <Image src={logoImage} class="h-9" alt="Logo ArturAna" />
-        { /* TODO: Fix the missions statement */ }
-        <p class="text-balance text-sm/6 text-gray-600">Making the world a better place through constructing elegant hierarchies.</p>
+        {/* TODO: Fix the missions statement */}
+        <p class="text-balance text-sm/6 text-gray-600">
+          Making the world a better place through constructing elegant
+          hierarchies.
+        </p>
       </div>
       <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
         <div class="md:grid md:grid-cols-2 md:gap-8">
           <div>
             <h3 class="text-sm/6 font-semibold text-gray-900">Kontakt</h3>
             <ul role="list" class="mt-6 space-y-4">
-              { /* TODO: input correct values */ }
+              {/* TODO: input correct values */}
               <li>
                 <div class="text-sm/6 text-gray-600">E-mail: abc@xyz.com</div>
               </li>
@@ -29,19 +33,37 @@ import logoImage from '../assets/arturana.svg'
             <h3 class="text-sm/6 font-semibold text-gray-900">Menu</h3>
             <ul role="list" class="mt-6 space-y-4">
               <li>
-                <a href="o-firmie" class="text-sm/6 text-gray-600 hover:text-gray-900">O firmie</a>
+                <a
+                  href="o-firmie"
+                  class="text-sm/6 text-gray-600 hover:text-gray-900"
+                  >O firmie</a
+                >
               </li>
               <li>
-                <a href="oferta" class="text-sm/6 text-gray-600 hover:text-gray-900">Oferta</a>
+                <a
+                  href="oferta"
+                  class="text-sm/6 text-gray-600 hover:text-gray-900">Oferta</a
+                >
               </li>
               <li>
-                <a href="referencje" class="text-sm/6 text-gray-600 hover:text-gray-900">Referencje</a>
+                <a
+                  href="referencje"
+                  class="text-sm/6 text-gray-600 hover:text-gray-900"
+                  >Referencje</a
+                >
               </li>
               <li>
-                <a href="partnerzy" class="text-sm/6 text-gray-600 hover:text-gray-900">Partnerzy</a>
+                <a
+                  href="partnerzy"
+                  class="text-sm/6 text-gray-600 hover:text-gray-900"
+                  >Partnerzy</a
+                >
               </li>
               <li>
-                <a href="kontakt" class="text-sm/6 text-gray-600 hover:text-gray-900">Kontakt</a>
+                <a
+                  href="kontakt"
+                  class="text-sm/6 text-gray-600 hover:text-gray-900">Kontakt</a
+                >
               </li>
             </ul>
           </div>
@@ -49,7 +71,9 @@ import logoImage from '../assets/arturana.svg'
       </div>
     </div>
     <div class="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-      <p class="text-sm/6 text-gray-600">&copy; 2024 ArturAna. Wszelkie prawa zastrzeżone.</p>
+      <p class="text-sm/6 text-gray-600">
+        &copy; 2024 ArturAna. Wszelkie prawa zastrzeżone.
+      </p>
     </div>
   </div>
 </footer>
