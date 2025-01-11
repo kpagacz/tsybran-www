@@ -2,6 +2,13 @@
 import { Image } from 'astro:assets'
 import logoImage from '../assets/arturana.svg'
 import logoPL from '../assets/PL.png'
+
+const { current } = Astro.props
+
+const chosenNavStyle =
+  'inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900'
+const otherNavStyle =
+  'inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700'
 ---
 
 <nav class="bg-white shadow">
@@ -68,31 +75,29 @@ import logoPL from '../assets/PL.png'
           />
         </div>
         <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-          {/* TODO: Fix the underline on the current page */}
-          <!-- Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
           <a
             href="o-firmie"
-            class="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+            class={current === 'o-firmie' ? chosenNavStyle : otherNavStyle}
             >O firmie</a
           >
           <a
             href="oferta"
-            class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+            class={current === 'oferta' ? chosenNavStyle : otherNavStyle}
             >Oferta</a
           >
           <a
             href="referencje"
-            class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+            class={current === 'referencje' ? chosenNavStyle : otherNavStyle}
             >Referencje</a
           >
           <a
             href="partnerzy"
-            class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+            class={current === 'partnerzy' ? chosenNavStyle : otherNavStyle}
             >Partnerzy</a
           >
           <a
             href="kontakt"
-            class="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+            class={current === 'kontakt' ? chosenNavStyle : otherNavStyle}
             >Kontakt</a
           >
         </div>

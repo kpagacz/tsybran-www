@@ -1,6 +1,8 @@
 ---
 import Navigation from '../components/Navigation.astro'
 import Footer from '../components/Footer.astro'
+
+const { current } = Astro.props
 ---
 
 <!doctype html>
@@ -13,7 +15,7 @@ import Footer from '../components/Footer.astro'
     <title>ArturAna</title>
   </head>
   <body>
-    <Navigation />
+    <Navigation current={current} />
     <slot />
     <Footer />
   </body>
