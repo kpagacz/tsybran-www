@@ -68,35 +68,37 @@ const otherNavStyle =
         class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
       >
         <div class="flex shrink-0 items-center">
-          <Image
-            src={logoImage}
-            alt="A logo of the company"
-            class="h-8 w-auto"
-          />
+          <a href="./">
+            <Image
+              src={logoImage}
+              alt="A logo of the company"
+              class="h-8 w-auto"
+            />
+          </a>
         </div>
         <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
           <a
-            href="./o-firmie"
+            href="../o-firmie"
             class={current === 'o-firmie' ? chosenNavStyle : otherNavStyle}
             >O firmie</a
           >
           <a
-            href="./oferta"
+            href="../oferta"
             class={current === 'oferta' ? chosenNavStyle : otherNavStyle}
             >Oferta</a
           >
           <a
-            href="./referencje"
+            href="../referencje"
             class={current === 'referencje' ? chosenNavStyle : otherNavStyle}
             >Referencje</a
           >
           <a
-            href="./partnerzy"
+            href="../partnerzy"
             class={current === 'partnerzy' ? chosenNavStyle : otherNavStyle}
             >Partnerzy</a
           >
           <a
-            href="./kontakt"
+            href="../kontakt"
             class={current === 'kontakt' ? chosenNavStyle : otherNavStyle}
             >Kontakt</a
           >
