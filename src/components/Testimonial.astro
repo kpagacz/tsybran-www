@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets'
+import annapytel from '../assets/testimonials/annapytel.jpeg'
+import konradpagacz from '../assets/testimonials/konradpagacz.jpeg'
+import marlenakwiatkowska from '../assets/testimonials/marlenakwiatkowska.jpeg'
+
+const { text, person } = Astro.props
+var imageData: ImageMetadata
+
+switch (person) {
+  case 'Anna Pytel':
+    imageData = annapytel
+    break
+  case 'Konrad Pagacz':
+    imageData = konradpagacz
+    break
+  case 'Marlena Kwiatkowska':
+    imageData = marlenakwiatkowska
+    break
+  default:
+    imageData = annapytel
+    break
+}
+---
+
+<div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+  <figure class="rounded-2xl bg-gray-50 p-8 text-sm/6">
+    <blockquote class="text-gray-900">
+      <p>
+        {text}
+      </p>
+    </blockquote>
+    <figcaption class="mt-6 flex items-center gap-x-4">
+      <Image
+        class="size-10 rounded-full bg-gray-50"
+        src={imageData}
+        alt="Photo of the person"
+      />
+      <div>
+        <div class="font-semibold text-gray-900">{person}</div>
+      </div>
+    </figcaption>
+  </figure>
+</div>
